@@ -144,42 +144,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.main__toolbox-container__tools__swatches__swatch:first-child {
-  background: red;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(2) {
-  background: orange;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(3) {
-  background: yellow;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(4) {
-  background: green;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(5) {
-  background: cyan;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(6) {
-  background: aquamarine;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(7) {
-  background: blue;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(8) {
-  background: magenta;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(9) {
-  background: pink;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(10) {
-  background: #777;
-}
-.main__toolbox-container__tools__swatches__swatch:nth-child(11) {
-  background: #000;
-}
-.main__toolbox-container__tools__swatches__swatch:last-child {
-  background: #fff;
-}
 .main__toolbox-container__tools__swatches__swatch.active {
   border: solid 1px #fff;
   outline: solid 1px #000;

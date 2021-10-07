@@ -7,7 +7,7 @@ class Canvas {
       {name: "medium", value: 10},
       {name: "large", value: 15},
     ];
-    this.brush;
+    this.brush = this.brushes[1].value;
   }
   init() {
     this.canvas = document.getElementById("canvas");

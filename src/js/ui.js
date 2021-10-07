@@ -11,6 +11,7 @@ class Ui {
   init() {
     this.toggleBtn.addEventListener("click", e => this.toggleToolbox(e));
     this.brushes.addEventListener("click", e => this.selectBrush(e));
+    this.swatches.addEventListener("click", e => this.selectSwatch(e));
   }
   toggleToolbox(e) {
     e.target.firstElementChild.classList.toggle("enabled");
@@ -28,6 +29,11 @@ class Ui {
     e.target.classList.add("active");
 
     return canvas.setBrush(size);
+  }
+  selectSwatch(e) {
+    if (e.target.tagName !== "BUTTON" || e.target.classList.contains("active")) return; // check
+
+    console.log(e.target)
   }
 }
 
