@@ -4,13 +4,75 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boilerplate</title>
+  <title>Drawing App</title>
   <link rel="shortcut icon" href="#" type="image/x-icon">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
+  <header class="header">
+    <!-- Logo -->
+    <div class="header__logo-container">
+      <span class="header__logo-container__logo">&#127912;</span>
+    </div>
+    <div class="header__title-container">
+      <h1 class="header__title-container__title">Drawing App</h1>
+    </div>
+  </header>
   
-  
+  <main class="main">
+    <!-- Canvas -->
+    <canvas id="canvas" class="main__canvas" width="400" height="300"></canvas>
+
+    <!-- Toolbox -->
+    <div class="main__toolbox-container active">
+        <!-- Toggle-btn -->
+        <button class="main__toolbox-container__toggle-btn" id="toggleBtn">
+          <span class="main__toolbox-container__toggle-btn__icon enabled">&#10097;</span>
+        </button>
+        <!-- Tools -->
+        <div class="main__toolbox-container__tools">
+          <!-- Brushes -->
+          <div class="main__toolbox-container__tools__brushes" id="brushes">
+            <button class="main__toolbox-container__tools__brushes__brush" type="button">
+              <span class="main__toolbox-container__tools__brushes__brush__icon">&#128396;</span>
+            </button>
+            <button class="main__toolbox-container__tools__brushes__brush active" type="button">
+              <span class="main__toolbox-container__tools__brushes__brush__icon">&#128396;</span>
+            </button>
+            <button class="main__toolbox-container__tools__brushes__brush" type="button">
+              <span class="main__toolbox-container__tools__brushes__brush__icon">&#128396;</span>
+            </button>
+          </div>
+          
+          <!-- Swatches -->
+          <div class="main__toolbox-container__tools__swatches" id="swatches">
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch active" type="button"></button>
+            <button class="main__toolbox-container__tools__swatches__swatch" type="button"></button>
+          </div>
+
+          <!-- Buttons -->
+          <div class="main__toolbox-container__tools__btns" id="btns">
+            <button class="main__toolbox-container__tools__btns__btn" type="button">
+              <span class="main__toolbox-container__tools__btns__btn__icon">&#129529;</span>
+            </button>
+            <button class="main__toolbox-container__tools__btns__btn" type="button">
+              <span class="main__toolbox-container__tools__btns__btn__icon">&#128190;</span>
+            </button>
+          </div>
+        </div>
+    </div>
+  </main>
 
   <script src="./assets/bundle.js"></script>
 </body>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 html {
   font-size: 62.5%;
 }
@@ -13,4 +14,219 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to left, #439CFB, #F187FB);
+}
+
+.header {
+  display: flex;
+  width: 100vw;
+  height: 15vh;
+}
+.header__logo-container {
+  flex-basis: 10rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .header__logo-container {
+    display: flex;
+  }
+}
+.header__logo-container__logo {
+  display: block;
+  text-align: center;
+  font-size: 6rem;
+  text-shadow: 1px 1px 3px #fff, 2px 2px 4px #000;
+}
+.header__title-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.header__title-container__title {
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  font-family: "Permanent Marker", cursive;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85vh;
+}
+.main__canvas {
+  width: 100%;
+  max-width: 40rem;
+  box-shadow: 0 0 5px;
+  background: #fff;
+}
+.main__toolbox-container.active .main__toolbox-container__tools {
+  display: flex;
+}
+.main__toolbox-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.5);
+  width: 40rem;
+  height: auto;
+  flex-direction: column;
+  box-shadow: 0 0 5px;
+}
+.main__toolbox-container__toggle-btn {
+  flex-basis: 2rem;
+  display: block;
+  text-align: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  background: #000;
+}
+.main__toolbox-container__toggle-btn__icon.enabled {
+  transform: rotate(270deg);
+}
+.main__toolbox-container__toggle-btn__icon {
+  display: inline-block;
+  transform: rotate(90deg);
+  color: #fff;
+}
+.main__toolbox-container__tools {
+  display: none;
+  justify-content: space-between;
+}
+.main__toolbox-container__tools__brushes {
+  flex-basis: 10rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main__toolbox-container__tools__brushes__brush.active {
+  background: rgba(255, 255, 255, 0.5);
+  border: solid 1px;
+}
+.main__toolbox-container__tools__brushes__brush:first-child .main__toolbox-container__tools__brushes__brush__icon {
+  font-size: 1.2rem;
+}
+.main__toolbox-container__tools__brushes__brush:nth-child(2) .main__toolbox-container__tools__brushes__brush__icon {
+  font-size: 1.5rem;
+}
+.main__toolbox-container__tools__brushes__brush:last-child .main__toolbox-container__tools__brushes__brush__icon {
+  font-size: 2rem;
+}
+.main__toolbox-container__tools__brushes__brush {
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.main__toolbox-container__tools__brushes__brush__icon {
+  display: inline-block;
+  text-shadow: 1px 1px 0px #fff;
+}
+.main__toolbox-container__tools__swatches {
+  flex-basis: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main__toolbox-container__tools__swatches__swatch:first-child {
+  background: red;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(2) {
+  background: orange;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(3) {
+  background: yellow;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(4) {
+  background: green;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(5) {
+  background: cyan;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(6) {
+  background: aquamarine;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(7) {
+  background: blue;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(8) {
+  background: magenta;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(9) {
+  background: pink;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(10) {
+  background: #777;
+}
+.main__toolbox-container__tools__swatches__swatch:nth-child(11) {
+  background: #000;
+}
+.main__toolbox-container__tools__swatches__swatch:last-child {
+  background: #fff;
+}
+.main__toolbox-container__tools__swatches__swatch.active {
+  border: solid 1px #fff;
+  outline: solid 1px #000;
+}
+.main__toolbox-container__tools__swatches__swatch {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.main__toolbox-container__tools__btns {
+  flex-basis: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main__toolbox-container__tools__btns__btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: transform 0.15s ease-in;
+  cursor: pointer;
+}
+.main__toolbox-container__tools__btns__btn:hover {
+  transform: scale(0.9);
+}
+.main__toolbox-container__tools__btns__btn__icon {
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .main {
+    flex-direction: row;
+  }
+  .main__toolbox-container {
+    width: auto;
+    height: 30rem;
+    flex-direction: row;
+  }
+  .main__toolbox-container__toggle-btn__icon.enabled {
+    transform: rotate(180deg);
+  }
+  .main__toolbox-container__toggle-btn__icon {
+    transform: rotate(0);
+  }
+  .main__toolbox-container__tools {
+    flex-direction: column;
+  }
+  .main__toolbox-container__tools__swatches {
+    max-width: 10rem;
+  }
 }
