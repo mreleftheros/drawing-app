@@ -69,6 +69,7 @@ body {
   max-width: 40rem;
   box-shadow: 0 0 5px;
   background: #fff;
+  cursor: url(./brush-medium-black.png), auto;
 }
 .main__toolbox-container.active .main__toolbox-container__tools {
   opacity: 1;

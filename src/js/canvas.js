@@ -9,7 +9,7 @@ class Canvas {
     ];
     this.brush = this.brushes[1].value;
     this.size = "medium";
-    this.color = "#000";
+    this.color = "black";
     this.coords;
     this.isDrawing = false;
   }
@@ -21,16 +21,22 @@ class Canvas {
   }
   setBrush(size) {
     this.size = size;
-    return this.brush = this.brushes.filter(brush => brush.name === size)[0].value;
+    this.brush = this.brushes.filter(brush => brush.name === size)[0].value;
+    
+    return this.updateCursor();
   }
   setColor(color) {
-    return this.color = color;
+    this.color = color;
+    
+    return this.updateCursor();
   }
   handleMouseMove(e) {
-    this.canvas.style.cursor = `url(./assets/brush-${this.size}-${this.color}.png), auto`;
-    this.canvas.style.caretColor = this.color;
 
     return this.updateCoords(e);
+  }
+  updateCursor() {
+    this.canvas.style.cursor = `url(./assets/brush-${this.size}-${this.color}.png), auto`;
+    this.canvas.style.caretColor = this.color;
   }
   updateCoords(e) {
     return this.coords = {x: e.offsetX, y: e.offsetY};
