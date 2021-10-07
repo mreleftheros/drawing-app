@@ -39,6 +39,7 @@ class Canvas {
     return this.coords = {x: e.offsetX, y: e.offsetY};
   }
   updatePoint(e) {
+    console.log(e.offsetX, e.offsetY)
     if (e.type === "mousedown") {
       this.isDrawing = true;
     } else if (e.type === "mouseup") {
