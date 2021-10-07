@@ -12,6 +12,11 @@ class Canvas {
   init() {
     this.canvas = document.getElementById("canvas");
     this.ctx = canvas.getContext("2d");
+
+    
+  }
+  setBrush(size) {
+    return this.brush = this.brushes.filter(brush => brush.name === size)[0].value;
   }
 }
 
