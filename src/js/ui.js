@@ -33,7 +33,15 @@ class Ui {
   selectSwatch(e) {
     if (e.target.tagName !== "BUTTON" || e.target.classList.contains("active")) return; // check
 
-    console.log(e.target)
+    let color = e.target.style.backgroundColor;
+
+    for (let swatch of this.swatches.children) {
+      swatch.classList.remove("active");
+    }
+
+    e.target.classList.add("active");
+
+    return canvas.setColor(color);
   }
 }
 
