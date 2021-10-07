@@ -20,13 +20,14 @@ class Ui {
     if (e.target.tagName !== "BUTTON" || e.target.classList.contains("active")) return; // check
     
     let size = e.target.getAttribute("data-size");
-    canvas.brushSize = size;
-
+    
     for (let brush of this.brushes.children) {
       brush.classList.remove("active");
     }
-
+    
     e.target.classList.add("active");
+
+    return canvas.setBrush(size);
   }
 }
 
