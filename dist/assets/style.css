@@ -71,15 +71,13 @@ body {
   background: #fff;
 }
 .main__toolbox-container.active .main__toolbox-container__tools {
-  display: flex;
+  opacity: 1;
 }
 .main__toolbox-container {
   display: flex;
-  background: rgba(255, 255, 255, 0.5);
   width: 40rem;
   height: auto;
   flex-direction: column;
-  box-shadow: 0 0 5px;
 }
 .main__toolbox-container__toggle-btn {
   flex-basis: 2rem;
@@ -100,8 +98,12 @@ body {
   pointer-events: none;
 }
 .main__toolbox-container__tools {
-  display: none;
+  display: flex;
+  opacity: 0;
   justify-content: space-between;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px;
+  transition: opacity 0.3s ease-out;
 }
 .main__toolbox-container__tools__brushes {
   flex-basis: 10rem;
@@ -124,7 +126,7 @@ body {
   font-size: 2rem;
 }
 .main__toolbox-container__tools__brushes__brush {
-  border: none;
+  border: solid 1px transparent;
   background: transparent;
   border-radius: 50%;
   padding: 0.5rem;
@@ -133,6 +135,7 @@ body {
 .main__toolbox-container__tools__brushes__brush__icon {
   display: inline-block;
   text-shadow: 1px 1px 0px #fff;
+  pointer-events: none;
 }
 .main__toolbox-container__tools__swatches {
   flex-basis: 20rem;

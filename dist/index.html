@@ -25,7 +25,7 @@
     <canvas id="canvas" class="main__canvas" width="400" height="300"></canvas>
 
     <!-- Toolbox -->
-    <div class="main__toolbox-container" id="toolbox">
+    <div class="main__toolbox-container active" id="toolbox">
         <!-- Toggle-btn -->
         <button class="main__toolbox-container__toggle-btn" id="toggleBtn">
           <span class="main__toolbox-container__toggle-btn__icon">&#10097;</span>
@@ -34,13 +34,13 @@
         <div class="main__toolbox-container__tools">
           <!-- Brushes -->
           <div class="main__toolbox-container__tools__brushes" id="brushes">
-            <button class="main__toolbox-container__tools__brushes__brush" type="button">
+            <button class="main__toolbox-container__tools__brushes__brush" data-size="small" type="button">
               <span class="main__toolbox-container__tools__brushes__brush__icon">&#128396;</span>
             </button>
-            <button class="main__toolbox-container__tools__brushes__brush active" type="button">
+            <button class="main__toolbox-container__tools__brushes__brush active" data-size="medium" type="button">
               <span class="main__toolbox-container__tools__brushes__brush__icon">&#128396;</span>
             </button>
-            <button class="main__toolbox-container__tools__brushes__brush" type="button">
+            <button class="main__toolbox-container__tools__brushes__brush" data-size="large" type="button">
               <span class="main__toolbox-container__tools__brushes__brush__icon">&#128396;</span>
             </button>
           </div>

@@ -67,17 +67,15 @@
   &__toolbox-container.active &__toolbox-container {
 
     &__tools {
-      display: flex;
+      opacity: 1;
     }
   }
 
   &__toolbox-container {
     display: flex;
-    background: rgba(255, 255, 255, .5);
     width: 40rem;
     height: auto;
     flex-direction: column;
-    box-shadow: 0 0 5px;
 
     &__toggle-btn {
       flex-basis: 2rem;
@@ -101,8 +99,12 @@
     }
 
     &__tools {
-      display: none;
+      display: flex;
+      opacity: 0;
       justify-content: space-between;
+      background: rgba(255, 255, 255, .5);
+      box-shadow: 0 0 5px;
+      transition: opacity .3s ease-out;
 
       // Brushes
       &__brushes {
@@ -136,7 +138,7 @@
         }
 
         &__brush {
-          border: none;
+          border: solid 1px transparent;
           background: transparent;
           border-radius: 50%;
           padding: .5rem;
@@ -145,6 +147,7 @@
           &__icon {
             display: inline-block;
             text-shadow: 1px 1px 0px #fff;
+            pointer-events: none;
           }
         }
       }
