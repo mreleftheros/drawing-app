@@ -97,6 +97,7 @@ body {
   display: inline-block;
   transform: rotate(90deg);
   color: #fff;
+  pointer-events: none;
 }
 .main__toolbox-container__tools {
   display: none;
