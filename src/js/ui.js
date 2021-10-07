@@ -7,11 +7,13 @@ class Ui {
     this.brushes = document.getElementById("brushes");
     this.swatches = document.getElementById("swatches");
     this.btns = document.getElementById("btns");
+    this.resetBtn = document.getElementById("resetBtn");
   }
   init() {
     this.toggleBtn.addEventListener("click", e => this.toggleToolbox(e));
     this.brushes.addEventListener("click", e => this.selectBrush(e));
     this.swatches.addEventListener("click", e => this.selectSwatch(e));
+    this.resetBtn.addEventListener("click", () => canvas.clearCanvas());
   }
   toggleToolbox(e) {
     e.target.firstElementChild.classList.toggle("enabled");
